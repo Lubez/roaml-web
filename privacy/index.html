@@ -102,7 +102,7 @@
 <main>
 
   <h1>roaml Privacy Policy</h1>
-  <p class="updated">Last updated: July 22, 2026</p>
+  <p class="updated">Last updated: August 20, 2026</p>
 
   <p>
     Tyler Luedtke ("we," "us," or "our") operates the roaml mobile application
@@ -120,13 +120,18 @@
     <tbody>
       <tr>
         <td>Account</td>
-        <td>Email address, display name, username, optional bio, optional avatar photo</td>
-        <td>Authentication and your public profile</td>
+        <td>Phone number, display name, username, optional email address, optional bio, optional avatar photo</td>
+        <td>Authentication, your public profile, and enabling friend discovery via contacts</td>
+      </tr>
+      <tr>
+        <td>SMS verification</td>
+        <td>Phone number you enter during sign-up or sign-in</td>
+        <td>Sending a one-time verification code (OTP) to confirm your identity. You opt in by entering your number and tapping "Send Code." Reply STOP to any roaml message to opt out of further SMS.</td>
       </tr>
       <tr>
         <td>Location</td>
-        <td>Approximate device location (collected only while the app is in the foreground)</td>
-        <td>Verifying you are near a venue when you check in, and showing distance to nearby venues on the map</td>
+        <td>Approximate device location. Collected in the foreground at check-in time. If you enable Dwell Reminders in Settings, location is also monitored in the background to detect when you have been near a venue for approximately 30 minutes.</td>
+        <td>Verifying you are near a venue when you check in, showing distance to nearby venues on the map, and (if Dwell Reminders are enabled) sending a local reminder notification to log your visit</td>
       </tr>
       <tr>
         <td>Check-in history</td>
@@ -165,17 +170,34 @@
     <strong>What we do not collect:</strong> roaml never stores your precise
     GPS coordinates. Location is used transiently, on your device, only to
     verify proximity to a venue at the moment of check-in — only the resolved
-    venue name and category are saved to our database.
+    venue name and category are saved to our database. Dwell Reminder processing
+    also happens entirely on-device; no location data is transmitted to our
+    servers.
   </p>
 
   <h2>How We Use Your Information</h2>
   <ul>
     <li>To create and maintain your account and public profile</li>
+    <li>To verify your identity via SMS one-time passcode during sign-up and sign-in</li>
     <li>To operate core app features: check-ins, feed, want-to-go list, follows, and reactions</li>
     <li>To verify proximity to a venue when you check in and to show distances on the map</li>
+    <li>To deliver local Dwell Reminder notifications on your device (if you enable this feature)</li>
+    <li>To enable friend discovery — matching your phone number against contacts of other roaml users who have granted Contacts permission, so friends can find each other on the platform</li>
     <li>To send push notifications related to app activity (e.g., new followers, reactions)</li>
     <li>To manage and validate premium subscription access</li>
     <li>To maintain the security and reliability of the App</li>
+  </ul>
+
+  <h2>SMS Messaging</h2>
+  <p>
+    roaml sends SMS messages solely for account verification (one-time passcodes).
+    You opt in by entering your phone number in the app and requesting a code.
+    No marketing or promotional messages are sent via SMS.
+  </p>
+  <ul>
+    <li><strong>To stop receiving SMS:</strong> reply <strong>STOP</strong> to any roaml text message. You will receive one confirmation message and no further messages will be sent.</li>
+    <li><strong>For help:</strong> reply <strong>HELP</strong> or email <a href="mailto:hello@roaml.app">hello@roaml.app</a>.</li>
+    <li>Message and data rates may apply. Message frequency depends on sign-in activity.</li>
   </ul>
 
   <h2>Third-Party Services</h2>
@@ -206,8 +228,13 @@
         <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
       </tr>
       <tr>
-        <td>Apple (APNs)</td>
-        <td>Push notification delivery</td>
+        <td>Twilio</td>
+        <td>SMS delivery for one-time verification codes. Twilio receives your phone number solely to transmit the OTP message.</td>
+        <td><a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener noreferrer">twilio.com/en-us/legal/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Apple (APNs / Sign In with Apple)</td>
+        <td>Push notification delivery and Apple ID-based authentication</td>
         <td><a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a></td>
       </tr>
     </tbody>
@@ -232,12 +259,12 @@
     <p style="margin:0;"><strong>Profile → Settings → Delete Account</strong> (at the bottom of the Settings sheet, below Sign Out)</p>
   </div>
   <p>
-    When you delete your account, we permanently remove: your check-ins,
-    want-to-go list, follows and follow requests, reactions, notifications and
-    notification preferences, push token, taste profile, and profile
-    information. Your avatar is deleted from storage and your authentication
-    record is deleted; database constraints automatically remove all
-    associated rows.
+    When you delete your account, we permanently remove: your phone number,
+    check-ins, want-to-go list, follows and follow requests, reactions,
+    notifications and notification preferences, push token, taste profile,
+    and profile information. Your avatar is deleted from storage and your
+    authentication record (including any stored phone number) is deleted;
+    database constraints automatically remove all associated rows.
   </p>
   <p>
     You may also contact us at <a href="mailto:hello@roaml.app">hello@roaml.app</a>
