@@ -42,17 +42,19 @@
     position: sticky; top: 0; z-index: 20;
     display: flex; align-items: center; justify-content: space-between;
     padding: 16px 64px;
-    background: rgba(255,255,255,0.92);
+    background: rgba(15, 23, 42, 0.94);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .logo { display: flex; align-items: center; gap: 8px; }
   .logo span { font-size: 21px; font-weight: 800; color: var(--text); }
+  .nav .logo span { color: #f9fafb; }
   .nav-links { display: flex; align-items: center; gap: 36px; }
-  .nav-links a { color: #444; font-size: 15px; font-weight: 500; }
+  .nav-links a { color: #cbd5e1; font-size: 15px; font-weight: 500; }
   .nav-links a:hover { color: var(--accent); }
   .nav-right { display: flex; align-items: center; gap: 20px; }
-  .nav-right .legal { color: #444; font-size: 14px; }
+  .nav-right .legal { color: #cbd5e1; font-size: 14px; }
+  .nav-right .legal:hover { color: var(--accent); }
   .btn-cta {
     background: var(--accent); color: #fff; font-size: 14px; font-weight: 600;
     padding: 10px 20px; border-radius: 8px; transition: background 0.15s ease;
